@@ -154,12 +154,11 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
+
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
--------------------------
-**web_dynamic**
 Carolina Capote - [Github](https://github.com/Carolinacapote) / [Twitter](https://twitter.com/CarolinaCapote7)
 Luis Eduardo Pacheco - [Github](https://github.com/lepc1972) / [Twitter](https://twitter.com/LEXUS72)
 
