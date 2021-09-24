@@ -22,7 +22,7 @@ def get_users():
 
 
 @app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)
-@swag_from('documentation/user/get_user.yml', methods=['GET'])
+@swag_from('documentation/user/get_user.yml')
 def get_user(user_id):
     """ Retrieves an user """
     user = storage.get(User, user_id)
@@ -34,7 +34,7 @@ def get_user(user_id):
 
 @app_views.route('/users/<user_id>', methods=['DELETE'],
                  strict_slashes=False)
-@swag_from('documentation/user/delete_user.yml', methods=['DELETE'])
+@swag_from('documentation/user/delete_user.yml')
 def delete_user(user_id):
     """
     Deletes a user Object
@@ -52,7 +52,7 @@ def delete_user(user_id):
 
 
 @app_views.route('/users', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/user/post_user.yml', methods=['POST'])
+@swag_from('documentation/user/post_user.yml')
 def post_user():
     """
     Creates a user
@@ -72,7 +72,7 @@ def post_user():
 
 
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
-@swag_from('documentation/user/put_user.yml', methods=['PUT'])
+@swag_from('documentation/user/put_user.yml')
 def put_user(user_id):
     """
     Updates a user

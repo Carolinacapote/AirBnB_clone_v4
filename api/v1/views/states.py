@@ -20,7 +20,7 @@ def get_states():
     return jsonify(list_states)
 
 
-@app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
+@app_views.route('/states/<state_id>', methods=['GET','DELETE', 'PUT'], strict_slashes=False)
 @swag_from('documentation/state/get_id_state.yml')
 def get_state(state_id):
     """ Retrieves a specific State """
@@ -31,9 +31,9 @@ def get_state(state_id):
     return jsonify(state.to_dict())
 
 
-@app_views.route('/states/<state_id>', methods=['DELETE'],
+@app_views.route('/states/<state_id>', methods=['GET','DELETE', 'PUT'],
                  strict_slashes=False)
-@swag_from('documentation/state/delete_state.yml', methods=['DELETE'])
+@swag_from('documentation/state/delete_state.yml')
 def delete_state(state_id):
     """
     Deletes a State Object
@@ -51,7 +51,7 @@ def delete_state(state_id):
 
 
 @app_views.route('/states', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/state/post_state.yml', methods=['POST'])
+@swag_from('documentation/state/post_state.yml')
 def post_state():
     """
     Creates a State
@@ -69,7 +69,7 @@ def post_state():
 
 
 @app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
-@swag_from('documentation/state/put_state.yml', methods=['PUT'])
+@swag_from('documentation/state/put_state.yml')
 def put_state(state_id):
     """
     Updates a State
