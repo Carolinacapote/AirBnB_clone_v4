@@ -30,7 +30,6 @@ $('button').click(function () {
     contentType: 'application/json',
     data: JSON.stringify({})
   }).done(function (data) {
-    console.log(data);
     for (const place of data) {
       const templ = `<article>
 
