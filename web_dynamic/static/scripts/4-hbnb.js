@@ -12,7 +12,7 @@ $(document).ready(function () {
         
         $('div.amenities h4').text(strNames);
     });
-
+});
 
 const apiStat = $('div#api_status');
 $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
@@ -22,8 +22,8 @@ $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
         apiStat.removeClass('available');
     }
 });
-});
 
+$('button').click(function () {
 $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search',
@@ -65,4 +65,5 @@ $.ajax({
     $('section.places').append($(templ));
    } 
 
+});
 });
