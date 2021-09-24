@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 });
 
-const apiStat = $('#api_status');
+const apiStat = $('div#api_status');
 $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
     if (data.status === 'OK') {
         apiStat.addClass('available');
