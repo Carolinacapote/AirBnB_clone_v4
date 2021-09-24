@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 });
 
-const apiStat = $('DIV#api_status');
+const apiStat = $('#api_status');
 $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
     if (data.status === 'OK') {
         apiStat.addClass('available');
@@ -22,3 +22,4 @@ $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
         apiStat.removeClass('available');
     }
 });
+
