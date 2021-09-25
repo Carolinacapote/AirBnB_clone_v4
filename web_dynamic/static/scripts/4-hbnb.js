@@ -21,17 +21,17 @@ $(document).ready(function () {
       apiStat.removeClass('available');
     }
   });
-});
 
-$('button').click(function () {
-  $.ajax({
-    type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search',
-    contentType: 'application/json',
-    data: JSON.stringify({})
-  }).done(function (data) {
-    for (const place of data) {
-      const templ = `<article>
+  $('button').click(function () {
+    $.ajax({
+      type: 'POST',
+      url: 'http://0.0.0.0:5001/api/v1/places_search',
+      contentType: 'application/json',
+      data: JSON.stringify({})
+    }).done(function (data) {
+      console.log(data);
+      for (const place of data) {
+        const templ = `<article>
 
        <div class="title_box">
 
@@ -60,7 +60,8 @@ $('button').click(function () {
         ${place.description}
        </div>
     </article>`;
-      $('section.places').append($(templ));
-    }
+        $('section.places').append($(templ));
+      }
+    });
   });
 });
